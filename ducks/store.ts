@@ -1,7 +1,7 @@
 import { applyMiddleware, combineReducers, compose, createStore } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools, EnhancerOptions } from "redux-devtools-extension";
-import users from "ducks/users";
+import users from "./users";
 
 const composeEnhancers = composeWithDevTools || compose;
 

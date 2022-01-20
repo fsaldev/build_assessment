@@ -5,10 +5,10 @@ interface IAction {
   type: string;
   payload?: any;
   meta?: any;
-  error?: boolean;
+  error: boolean | null;
 }
 
-export const createAction = (type: string, error: boolean = null): Function => (
+export const createAction = (type: string, error: boolean | null = null): Function => (
   payload: any = null,
   meta: any = null
 ): IAction => ({
@@ -31,9 +31,9 @@ export const createApiAction = (
   request: Function,
   options: any = {}
 ) => {
-  const requestAction = createAction(constants.REQUEST);
-  const successAction = createAction(constants.SUCCESS);
-  const failureAction = createErrorAction(constants.FAILURE);
+  const requestAction = createAction(constants.REQUEST ?? '');
+  const successAction = createAction(constants.SUCCESS ?? '');
+  const failureAction = createErrorAction(constants.FAILURE ?? '');
 
   return (payload: any, meta: any = {}) => (
     dispatch: Function,

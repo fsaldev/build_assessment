@@ -1,13 +1,13 @@
 import { AxiosError } from "axios";
-import { Users } from "interfaces/UserPayloads";
+import { Users } from "../../interfaces/UserPayloads";
 
 interface IUsersState {
   list: {
     data: Users[];
     isLoading: boolean;
-    error: AxiosError;
+    error: AxiosError | null;
   };
-  selectedUser: Users;
+  selectedUser: Users | null;
 }
 
 const initialState: IUsersState = {
@@ -19,8 +19,8 @@ const initialState: IUsersState = {
   selectedUser: null,
 };
 
-const reducer = (state = initialState, action) => {
-  const MasterMap = {
+const reducer = (state = initialState, action: {type: string, payload: any}) => {
+  const MasterMap: Record<string, () => IUsersState> = {
     "USERS/GET_USERS_LIST_REQUEST": (): IUsersState => ({
       ...state,
       list: {
