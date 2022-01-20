@@ -2,7 +2,7 @@ import React from "react";
 import HomeHeaderText from "../../components/headers/HomeHeaderText";
 import ButtonWithIcon from "../../components/buttons/ButtonWithIcon";
 import Link from "next/link";
-import { useOtp } from "./hooks/useOtp";
+import { useOtp } from "../../hooks/useOtp";
 
 export default function Verifcation() {
   const { array, label, sublabel, disabled, handleOTP } = useOtp();
@@ -39,7 +39,7 @@ export default function Verifcation() {
         {disabled ? (
           <ButtonWithIcon label="Continue" isDisabled={true} />
         ) : (
-          <Link href="/signup/create">
+          <Link href="/signup/create" passHref>
             <ButtonWithIcon label="Continue" isDisabled={disabled} />
           </Link>
         )}

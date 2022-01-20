@@ -47,7 +47,7 @@ export default function Phease() {
       </div>
 
       <div className="mt-7 ">
-        <Link href="/signup/home">
+        <Link href="/signup/home" passHref>
           <ButtonWithIcon isDisabled={false} label="Continue to Login" />
         </Link>
       </div>

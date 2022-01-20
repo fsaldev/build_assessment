@@ -5,7 +5,7 @@ import RoundedButton from "../../components/buttons/RoundedBorderButton";
 import InputField from "../../components/inputfield";
 import ButtonWithIcon from "../../components/buttons/ButtonWithIcon";
 import Divder from "../../components/divider";
-import { useSignUp } from "./hooks/useSignUp";
+import { useSignUp } from "../../hooks/useSignUp";
 
 function SignUp() {
   const {

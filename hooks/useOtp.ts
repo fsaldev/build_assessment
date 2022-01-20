@@ -2,7 +2,7 @@ import React, { ChangeEvent, useState } from "react";
 import {
   removeItemFromArray,
   setArrayWithData,
-} from "../../../components/utils";
+} from "../components/utils";
 import { useRouter } from "next/router";
 export const useOtp = () => {
   const [valueOTP, setValueOTP] = useState<string>("");

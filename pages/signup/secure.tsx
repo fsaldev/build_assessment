@@ -3,7 +3,7 @@ import Link from "next/link";
 import HomeHeaderText from "../../components/headers/HomeHeaderText";
 import ButtonWithIcon from "../../components/buttons/ButtonWithIcon";
 import InputField from "../../components/inputfield";
-import { usePassword } from "./hooks/usePassword";
+import { usePassword } from "../../hooks/usePassword";
 
 export default function CreatePassword() {
   const {

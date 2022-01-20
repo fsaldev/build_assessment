@@ -5,7 +5,7 @@ import ButtonWithIcon from "../../components/buttons/ButtonWithIcon";
 import InputField from "../../components/inputfield";
 import VectorIcon from "../../svgs/Vector.svg";
 import Divder from "../../components/divider";
-import { useCreate } from "./hooks/useCreate";
+import { useCreate } from "../../hooks/useCreate";
 
 export default function CreateNEAR() {
   const { email, name, disabled, handleChange } = useCreate();
