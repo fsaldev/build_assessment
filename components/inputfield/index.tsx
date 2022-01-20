@@ -9,7 +9,7 @@ type Props = {
 
 const InputField = ({ onChange, type, placeholder, value }: Props): JSX.Element => {
   return (
-    <div className="mb-6 rounded-md border">
+    <div className="mb-6 rounded-md">
       <input
         type={type}
         placeholder={placeholder}

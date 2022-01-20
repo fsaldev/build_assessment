@@ -2,6 +2,10 @@ import React from "react";
 import Link from "next/link";
 import HomeHeaderText from "../../components/headers/HomeHeaderText";
 import ButtonWithIcon from "../../components/buttons/ButtonWithIcon";
+import InputField from "../../components/inputfield";
+import CopyIcon from "../../svgs/copy.svg";
+import Divder from "../../components/divider";
+import ButtonWithNum from "../../components/buttons/ButtonWithNum";
 
 export default function CreateNEAR() {
   const [disabled, setDisabled] = React.useState<boolean>(true);
@@ -20,7 +24,9 @@ export default function CreateNEAR() {
       setDisabled(false)
     }
   }
-  console.log("Password",Password ,"confirmPassword", confirmPassword)
+  console.log("Password", Password, "confirmPassword", confirmPassword)
+ 
+
   return (
     <div className="flex flex-col items-center justify-center">
       <HomeHeaderText Text="Secure your account" />
@@ -33,32 +39,70 @@ export default function CreateNEAR() {
           <p className="text-center text-[20px]">Seed phrase</p>
       </div>
       
+
+
+
      
+      
+      <div className="mt-4    lex flex-row items-center justify-center px-5  ">
+        
+  <div className="border rounded-lg bg-gray-50 flex flex-col items-center justify-center " >
+        
+          <div className=" flex flex-row items-center justify-center">
+          <ButtonWithNum number='1' description='gather' />
+          <ButtonWithNum number='2' description='engage' />
+          <ButtonWithNum number='3' description='father' />
+    
+          </div>
+          
+          
+    
+          <div className=" flex flex-row items-center justify-center ">
+          <ButtonWithNum number='4' description='plant' />
+          <ButtonWithNum number='5' description='indego' />
+          <ButtonWithNum number='6' description='dental' />
+     
+          </div>
+          
 
-      <div className="mt-1 ">
-        {disabled ? (
-          <ButtonWithIcon isDisabled={disabled} label="Continue" />
-        ) : (
-          <Link href="/create" passHref>
-            <ButtonWithIcon isDisabled={disabled} label="Continue" />
-          </Link>
-        )}
-      </div>
-      <div className="mt-2  ">
-        <p className="text-center  text-[12px]" >claudio@metapool.app</p>
-      </div>
+          <div className=" flex flex-row items-center justify-center">
+          <ButtonWithNum number='7' description='sick' />
+          <ButtonWithNum number='8' description='fungus' />
+          <ButtonWithNum number='9' description='river' />
+     
+          </div>
 
-      <div className="mt-2 px-5 text-[14px]">
-        <p className="text-center">
-        By creating a NEAR account, you agree to the NEAR Wallet{" "}
-          <Link href="/" passHref>
-            <span style={{ color: "blue" }}>Terms of Service</span>
-          </Link>{" "}
-          and{" "}
-          <Link href="/" passHref>
-            <span style={{ color: "blue" }}>Privacy Policy</span>
+          <div className=" flex flex-row items-center justify-center">
+          <ButtonWithNum number='10' description='morning' />
+          <ButtonWithNum number='11' description='love' />
+          <ButtonWithNum number='12' description='cow' />
+     
+          </div>
+          
+
+
+
+        </div>
+
+        </div>
+
+
+
+      
+
+
+
+
+      <div style={{ color: "#885FFF" }} className="mt-5 flex"><CopyIcon/>
+          <p className="text-center text-[20px] pl-3 ">Copy seed</p>
+      </div>
+      
+      <div className="mt-7 ">
+      
+          <Link href="/create">
+            <ButtonWithIcon isDisabled={false} label="Continue to Login" />
           </Link>
-        </p>
+      
       </div>
    
    

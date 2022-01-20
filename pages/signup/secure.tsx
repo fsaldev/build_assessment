@@ -7,8 +7,38 @@ import InputField from "../../components/inputfield";
 export default function CreateNEAR() {
   const [disabled, setDisabled] = React.useState<boolean>(true);
   const [pasCheck, setPasCheck] = React.useState<boolean>(false);
-  const [Password, setPassword] = React.useState<string>("");
+  const [password, setPassword] = React.useState<string>("");
   const [confirmPassword, setconfirmPassword] = React.useState<string>("");
+
+  React.useEffect(() => {
+    if (password.length >= 3 && confirmPassword.length >= 3) {
+      setDisabled(true);
+
+      if (password === confirmPassword) {
+        setDisabled(false);
+        setPasCheck(false)
+
+      } else if (password.length < confirmPassword.length || confirmPassword.length > password.length) {
+
+        setDisabled(true);
+        setPasCheck(false) 
+      } else if (password.length === confirmPassword.length || confirmPassword.length === password.length) {
+        if (password !== confirmPassword) {
+          setPasCheck(true) 
+          setDisabled(true);
+      
+        } else {
+          setPasCheck(false) 
+        }
+        setDisabled(true);
+      }
+      
+    }
+    if (password.length <= 3 || confirmPassword.length <= 3) {
+      setPasCheck(false)
+      }
+  }, [password,confirmPassword]);
+
 
   const handleChange = (e: any) => {
     setPassword(e.target.value);
@@ -17,11 +47,8 @@ export default function CreateNEAR() {
 
   const handleChange1 = (e: any) => {
     setconfirmPassword(e.target.value)
-    if (confirmPassword.length > 0) {
-      setDisabled(false)
-    }
   }
-  console.log("Password",Password ,"confirmPassword", confirmPassword)
+  console.log("Password",password ,"confirmPassword", confirmPassword)
   return (
     <div className="flex flex-col items-center justify-center">
       <HomeHeaderText Text="Secure your account" />
@@ -37,7 +64,7 @@ export default function CreateNEAR() {
           onChange={handleChange}
           type="Password"
           placeholder="***"
-          value={Password}
+          value={password}
         />
      
           <p className="text-start text-gray-500 ">Confirm Password</p>

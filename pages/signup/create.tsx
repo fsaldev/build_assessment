@@ -17,12 +17,15 @@ export default function CreateNEAR() {
     } else if (e.target.type === "email") {
       setEmail(e.target.value);
     }
-    if (name.length > 1 && email.length > 1) {
-      setDisabled(false);
-    }
   };
 
-  console.log("name",name ,"email", email)
+  React.useEffect(() => {
+    if (email.length >= 3 && name.length >= 3) {
+      setDisabled(false);
+    } else { setDisabled(true); }
+  }, [email , name]);
+
+
   return (
     <div className="flex flex-col items-center justify-center">
       <HomeHeaderText Text="Create NEAR account" />
@@ -61,9 +64,9 @@ export default function CreateNEAR() {
           </div>
         </div>
 
-        <p className=" text-red-500 text-xs ">
+        {/* <p className=" text-red-500 text-xs ">
           Account ID already taken!
-        </p>
+        </p> */}
       </div>
 
       <div className="mt-5 ">

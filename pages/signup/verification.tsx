@@ -27,7 +27,18 @@ export default function Verifcation() {
     }
   }, [query]);
 
+
+  React.useEffect(() => {
+    if (valueOTP.length >= 6) {
+      console.log("vaandruuuu", valueOTP);
+          
+          setDisabled(false);
+        }
+  }, [valueOTP]);
+
+
   const handleOTP = (e: ChangeEvent<HTMLInputElement>, name: string) => {
+ 
     const value = e.target.value;
     switch (name) {
       case name:
@@ -43,6 +54,7 @@ export default function Verifcation() {
         break;
     }
     
+   
     setValueOTP(valueOTP.concat(e.target.value));
     if (!e.target.value) {
       setDisabled(true);
@@ -52,7 +64,6 @@ export default function Verifcation() {
       setDisabled(true);
       return;
     }
-    setDisabled(false);
   };
 
   console.log("va", valueOTP);
@@ -90,10 +101,10 @@ export default function Verifcation() {
       </div>
       <div className="mt-5">
         {disabled ? (
-          <ButtonWithIcon label="Continue" isDisabled={disabled} />
+          <ButtonWithIcon label="Continue" isDisabled={true} />
         ) : (
-          <Link href="/create" passHref>
-            <ButtonWithIcon label="Continue" isDisabled={false} />
+          <Link href="/signup/create">
+            <ButtonWithIcon label="Continue" isDisabled={disabled} />
           </Link>
         )}
       </div>
