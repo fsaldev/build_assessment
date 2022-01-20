@@ -1,30 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import HomeHeaderText from "../../components/headers/HomeHeaderText";
 import ButtonWithIcon from "../../components/buttons/ButtonWithIcon";
 import InputField from "../../components/inputfield";
 import VectorIcon from "../../svgs/Vector.svg";
 import Divder from "../../components/divider";
+import { useCreate } from "./hooks/useCreate";
 
 export default function CreateNEAR() {
-  const [disabled, setDisabled] = React.useState<boolean>(true);
-  const [name, setName] = React.useState<string>("");
-  const [email, setEmail] = React.useState<string>("");
-
-  const handleChange = (e: any) => {
-    if (e.target.type === "text") {
-      setName(e.target.value);
-    } else if (e.target.type === "email") {
-      setEmail(e.target.value);
-    }
-  };
-
-  React.useEffect(() => {
-    if (email.length >= 3 && name.length >= 3) {
-      setDisabled(false);
-    } else { setDisabled(true); }
-  }, [email , name]);
-
+  const { email, name, disabled, handleChange } = useCreate();
 
   return (
     <div className="flex flex-col items-center justify-center">
@@ -63,10 +47,6 @@ export default function CreateNEAR() {
             .near
           </div>
         </div>
-
-        {/* <p className=" text-red-500 text-xs ">
-          Account ID already taken!
-        </p> */}
       </div>
 
       <div className="mt-5 ">

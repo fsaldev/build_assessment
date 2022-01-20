@@ -3,85 +3,48 @@ import Link from "next/link";
 import HomeHeaderText from "../../components/headers/HomeHeaderText";
 import ButtonWithIcon from "../../components/buttons/ButtonWithIcon";
 import InputField from "../../components/inputfield";
+import { usePassword } from "./hooks/usePassword";
 
-export default function CreateNEAR() {
-  const [disabled, setDisabled] = React.useState<boolean>(true);
-  const [pasCheck, setPasCheck] = React.useState<boolean>(false);
-  const [password, setPassword] = React.useState<string>("");
-  const [confirmPassword, setconfirmPassword] = React.useState<string>("");
-
-  React.useEffect(() => {
-    if (password.length >= 3 && confirmPassword.length >= 3) {
-      setDisabled(true);
-
-      if (password === confirmPassword) {
-        setDisabled(false);
-        setPasCheck(false)
-
-      } else if (password.length < confirmPassword.length || confirmPassword.length > password.length) {
-
-        setDisabled(true);
-        setPasCheck(false) 
-      } else if (password.length === confirmPassword.length || confirmPassword.length === password.length) {
-        if (password !== confirmPassword) {
-          setPasCheck(true) 
-          setDisabled(true);
-      
-        } else {
-          setPasCheck(false) 
-        }
-        setDisabled(true);
-      }
-      
-    }
-    if (password.length <= 3 || confirmPassword.length <= 3) {
-      setPasCheck(false)
-      }
-  }, [password,confirmPassword]);
-
-
-  const handleChange = (e: any) => {
-    setPassword(e.target.value);
-  };
-
-
-  const handleChange1 = (e: any) => {
-    setconfirmPassword(e.target.value)
-  }
-  console.log("Password",password ,"confirmPassword", confirmPassword)
+export default function CreatePassword() {
+  const {
+    pasCheck,
+    password,
+    confirmPassword,
+    disabled,
+    handleChange,
+    handleChange1,
+  } = usePassword();
   return (
     <div className="flex flex-col items-center justify-center">
       <HomeHeaderText Text="Secure your account" />
       <div className=" px-6 flex flex-row items-center justify-center mt-6">
         <p className="text-start text-gray-500">
-        Keep your apps safe from other with access to your computer.
+          Keep your apps safe from other with access to your computer.
         </p>
       </div>
 
       <div className="mt-8 w-full px-6 ">
         <p className="text-start text-gray-500 ">Password</p>
-        <InputField 
+        <InputField
           onChange={handleChange}
           type="Password"
           placeholder="***"
           value={password}
         />
-     
-          <p className="text-start text-gray-500 ">Confirm Password</p>
-    
-   
-        <InputField 
+
+        <p className="text-start text-gray-500 ">Confirm Password</p>
+
+        <InputField
           onChange={handleChange1}
           type="Password"
           placeholder="***"
           value={confirmPassword}
         />
-        { pasCheck?(<p className=" text-red-500 text-xs ">
-          Password should be Same
-        </p>):('')
-
-        }
-        
+        {pasCheck ? (
+          <p className=" text-red-500 text-xs ">Password should be Same</p>
+        ) : (
+          ""
+        )}
       </div>
 
       <div className="mt-1 ">
@@ -94,12 +57,12 @@ export default function CreateNEAR() {
         )}
       </div>
       <div className="mt-2  ">
-        <p className="text-center  text-[12px]" >claudio@metapool.app</p>
+        <p className="text-center  text-[12px]">claudio@metapool.app</p>
       </div>
 
       <div className="mt-2 px-5 text-[14px]">
         <p className="text-center">
-        By creating a NEAR account, you agree to the NEAR Wallet{" "}
+          By creating a NEAR account, you agree to the NEAR Wallet{" "}
           <Link href="/" passHref>
             <span style={{ color: "blue" }}>Terms of Service</span>
           </Link>{" "}
@@ -109,8 +72,6 @@ export default function CreateNEAR() {
           </Link>
         </p>
       </div>
-   
-   
     </div>
   );
 }
