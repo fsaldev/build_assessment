@@ -1,12 +1,15 @@
 import Header from "./Header"
-import Image from 'next/image'
-import HomeIcon from "../../svgs/home.svg"
 
-const HomeHeaderText = () => {
+type Props = {
+  Text: string;
+
+}
+
+const HomeHeaderText = ({Text}:Props) => {
 
   const title = () => (<>
     
-    <span className="text-black font-medium text-xl">Verification</span>
+    <span className="text-black font-medium text-xl">{Text}</span>
   </>)
 
   return (<Header Title={title}></Header>)

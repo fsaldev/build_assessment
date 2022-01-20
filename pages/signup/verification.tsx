@@ -59,7 +59,7 @@ export default function Verifcation() {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <HomeHeaderText />
+    <HomeHeaderText Text="Verification"/>
       <div className="pt-5 px-10 flex flex-row items-center justify-center mt-5">
         <p className="text-center">
           We've sent a 6-digit verification code to the {label}
@@ -78,13 +78,12 @@ export default function Verifcation() {
         <div id="otp" className="flex flex-row justify-center px-2 ">
           {array.map((arr, ind) => (
             <input
-              onChange={handleOTP}
+              onChange={(e)=>handleOTP(e, `otp-${ind}`)}
               className="m-2 border focus:border-accent-theme focus:outline-none h-10 w-10 text-center rounded appearance-none"
               type="text"
               id="first"
               maxLength={1}
               key={ind}
-              name={`otp-${ind}`}
             />
           ))}
         </div>

@@ -65,7 +65,7 @@ function SignUp() {
             isActive={isActivePhone}
           />
         </div>
-        <div className="mt-5 w-full">
+        <div className="mt-5 w-full px-3">
           <InputField
             onChange={handleChange}
             type={isActiveEmail === true ? "email" : "tel"}
@@ -73,7 +73,7 @@ function SignUp() {
             value={isActiveEmail === true ? email : phone}
           />
         </div>
-        <div className="mt-5">
+        <div className="mt-0">
           {disabled ? (
             <ButtonWithIcon isDisabled={disabled} label="Continue" />
           ) : (
@@ -94,7 +94,7 @@ function SignUp() {
             </Link>
           </p>
         </div>
-        <div className="mt-10 w-full">
+        <div className="mt-10 w-full px-3">
           <Divder />
         </div>
         <div className="mt-5">

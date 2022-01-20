@@ -10,12 +10,12 @@ type Props = {
 
 const ButtonWithIcon = ({ label, isDisabled, isLogin, onClick }: Props): JSX.Element => {
   let className =
-    "bg-accent-theme font-bold py-2 px-4 rounded flex items-center";
+    "bg-accent-theme font-bold py-2 px-4 rounded-lg flex items-center";
   if (isDisabled) {
-    className = "bg-silver-sand font-bold py-2 px-4 rounded flex items-center";
+    className = "bg-silver-sand font-bold py-2 px-4 rounded-lg flex items-center";
   }
   if (isLogin && isLogin === true) {
-    className = "bg-accent-black font-bold py-2 px-4 rounded flex items-center";
+    className = "bg-accent-black font-bold py-2 px-4 rounded-lg flex items-center";
   }
   
   return (
