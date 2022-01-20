@@ -1,9 +1,3 @@
-import HomeHeader from '../components/headers/HomeHeader'
+import SignUp from './signup/index'
 
-export default function Home() {
-  return (
-    <div className="flex flex-col items-center justify-center">
-      <HomeHeader />
-    </div>
-  )
-}
+export default SignUp
