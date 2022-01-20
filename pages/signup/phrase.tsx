@@ -5,7 +5,9 @@ import ButtonWithIcon from "../../components/buttons/ButtonWithIcon";
 import CopyIcon from "../../svgs/copy.svg";
 import ButtonWithNum from "../../components/buttons/ButtonWithNum";
 
-export default function Phease() {
+export default function Phrase() {
+  const phrase = 'gather engage father plant indego dental sick fungus river morning love cow'
+  
   return (
     <div className="flex flex-col items-center justify-center">
       <HomeHeaderText Text="Secure your account" />
@@ -19,25 +21,10 @@ export default function Phease() {
       </div>
       <div className="mt-4    lex flex-row items-center justify-center px-5  ">
         <div className="border rounded-lg bg-gray-50 flex flex-col items-center justify-center ">
-          <div className=" flex flex-row items-center justify-center">
-            <ButtonWithNum number="1" description="gather" />
-            <ButtonWithNum number="2" description="engage" />
-            <ButtonWithNum number="3" description="father" />
-          </div>
-          <div className=" flex flex-row items-center justify-center ">
-            <ButtonWithNum number="4" description="plant" />
-            <ButtonWithNum number="5" description="indego" />
-            <ButtonWithNum number="6" description="dental" />
-          </div>
-          <div className=" flex flex-row items-center justify-center">
-            <ButtonWithNum number="7" description="sick" />
-            <ButtonWithNum number="8" description="fungus" />
-            <ButtonWithNum number="9" description="river" />
-          </div>
-          <div className=" flex flex-row items-center justify-center">
-            <ButtonWithNum number="10" description="morning" />
-            <ButtonWithNum number="11" description="love" />
-            <ButtonWithNum number="12" description="cow" />
+          <div className=" flex justify-center flex-row  flex-wrap">
+            {
+              phrase.split(' ').map((word, ind) => (<ButtonWithNum key={ind} number={(ind +1).toString()} description={word} />))
+            }
           </div>
         </div>
       </div>
