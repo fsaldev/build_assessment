@@ -11,6 +11,7 @@ module.exports = {
         'alabaster': '#FCFCFC',
         'silver-sand': '#BEBEC2',
         'accent-theme': '#885FFF',
+        'accent-black': '#414047',
       }
     },
   },

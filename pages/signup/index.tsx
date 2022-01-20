@@ -1,17 +1,18 @@
-import React, { useMemo } from "react";
+import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import HomeHeader from "../../components/headers/HomeHeader";
 import RoundedButton from "../../components/buttons/RoundedBorderButton";
 import InputField from "../../components/inputfield";
 import ButtonWithIcon from "../../components/buttons/ButtonWithIcon";
 import Divder from "../../components/divider";
 
-export default function SignUp() {
+function SignUp() {
   const [email, setEmail] = React.useState<string>("");
   const [phone, setPhone] = React.useState<string>("");
   const [isActiveEmail, setIsActiveEmail] = React.useState<boolean>(true);
   const [isActivePhone, setIsActivePhone] = React.useState<boolean>(false);
-  const [disabled, setDisabled] = React.useState<boolean>(false);
+  const [disabled, setDisabled] = React.useState<boolean>(true);
 
   const [placeholer, setPlaceHolder] =
     React.useState<string>("johndoe@gmail.com");
@@ -21,8 +22,9 @@ export default function SignUp() {
     } else if (isActivePhone === true) {
       setPhone(e.target.value);
     }
-    if (e.target.value && e.target.value.length === 0) {
+    if (!e.target.value) {
       setDisabled(true);
+      return;
     }
     setDisabled(false);
   };
@@ -33,18 +35,20 @@ export default function SignUp() {
         setIsActiveEmail(true);
         setPlaceHolder("johndoe@gmail.com");
         setPhone("");
+        setDisabled(true);
         break;
       case "phone":
         setIsActivePhone(true);
         setIsActiveEmail(false);
         setEmail("");
         setPlaceHolder("Ex (337) 378 8383");
+        setDisabled(true);
         break;
       default:
         break;
     }
   };
-  console.log("email", email, phone);
+
   return (
     <div className="flex flex-col items-center justify-center">
       <HomeHeader />
@@ -70,7 +74,13 @@ export default function SignUp() {
           />
         </div>
         <div className="mt-5">
-          <ButtonWithIcon isDisabled={disabled} label="Continue" />
+          {disabled ? (
+            <ButtonWithIcon isDisabled={disabled} label="Continue" />
+          ) : (
+            <Link href={`/signup/verification?email=${email}&phone=${phone}`}>
+              <ButtonWithIcon isDisabled={disabled} label="Continue" />
+            </Link>
+          )}
         </div>
         <div className="mt-5">
           <p className="text-center">
@@ -91,9 +101,15 @@ export default function SignUp() {
           <p className="text-center">Already have an account?</p>
         </div>
         <div className="mt-5">
-          <ButtonWithIcon isDisabled={false} label="Log in with NEAR " />
+          <ButtonWithIcon
+            isDisabled={false}
+            label="Log in with NEAR "
+            isLogin={true}
+          />
         </div>
       </div>
     </div>
   );
 }
+
+export default SignUp;
