@@ -62,7 +62,7 @@ export default function Verifcation() {
     <HomeHeaderText Text="Verification"/>
       <div className="pt-5 px-10 flex flex-row items-center justify-center mt-5">
         <p className="text-center">
-          We've sent a 6-digit verification code to the {label}
+          We&apos;ve sent a 6-digit verification code to the {label}
         </p>
       </div>
 
@@ -92,14 +92,14 @@ export default function Verifcation() {
         {disabled ? (
           <ButtonWithIcon label="Continue" isDisabled={disabled} />
         ) : (
-          <Link href="/create">
+          <Link href="/create" passHref>
             <ButtonWithIcon label="Continue" isDisabled={false} />
           </Link>
         )}
       </div>
 
       <div className="my-5">
-        <p className="text-center">Did't receive your code?</p>
+        <p className="text-center">Didn&apos;t receive your code?</p>
       </div>
 
       <div className="mt-2  mb-7 px-10 flex flex-row items-center justify-center ">

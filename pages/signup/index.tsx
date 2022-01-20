@@ -77,7 +77,7 @@ function SignUp() {
           {disabled ? (
             <ButtonWithIcon isDisabled={disabled} label="Continue" />
           ) : (
-            <Link href={`/signup/verification?email=${email}&phone=${phone}`}>
+            <Link href={`/signup/verification?email=${email}&phone=${phone}`} passHref>
               <ButtonWithIcon isDisabled={disabled} label="Continue" />
             </Link>
           )}
@@ -85,11 +85,11 @@ function SignUp() {
         <div className="mt-5">
           <p className="text-center">
             by clicking continue you must agree to near labs{" "}
-            <Link href="/">
+            <Link href="/" passHref>
               <span style={{ color: "blue" }}>Terms & Conditions</span>
             </Link>{" "}
             and{" "}
-            <Link href="/">
+            <Link href="/" passHref>
               <span style={{ color: "blue" }}>Privacy Policy</span>
             </Link>
           </p>

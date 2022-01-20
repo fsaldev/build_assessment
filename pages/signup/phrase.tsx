@@ -1,10 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import HomeHeaderText from "../../components/headers/HomeHeaderText";
 import ButtonWithIcon from "../../components/buttons/ButtonWithIcon";
-import InputField from "../../components/inputfield";
-import VectorIcon from "../../svgs/Vector.svg";
-import Divder from "../../components/divider";
 
 export default function CreateNEAR() {
   const [disabled, setDisabled] = React.useState<boolean>(true);
@@ -42,7 +39,7 @@ export default function CreateNEAR() {
         {disabled ? (
           <ButtonWithIcon isDisabled={disabled} label="Continue" />
         ) : (
-          <Link href="/create">
+          <Link href="/create" passHref>
             <ButtonWithIcon isDisabled={disabled} label="Continue" />
           </Link>
         )}
@@ -54,11 +51,11 @@ export default function CreateNEAR() {
       <div className="mt-2 px-5 text-[14px]">
         <p className="text-center">
         By creating a NEAR account, you agree to the NEAR Wallet{" "}
-          <Link href="/">
+          <Link href="/" passHref>
             <span style={{ color: "blue" }}>Terms of Service</span>
           </Link>{" "}
           and{" "}
-          <Link href="/">
+          <Link href="/" passHref>
             <span style={{ color: "blue" }}>Privacy Policy</span>
           </Link>
         </p>
