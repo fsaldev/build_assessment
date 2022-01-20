@@ -1,5 +1,4 @@
 import Header from "./Header"
-import Image from 'next/image'
 import HomeIcon from "../../svgs/home.svg"
 
 const HomeHeader = () => {

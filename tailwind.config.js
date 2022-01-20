@@ -9,7 +9,8 @@ module.exports = {
         'accent': '#B072FF',
         'white-smoke': '#F5F5F5',
         'alabaster': '#FCFCFC',
-        'silver-sand': '#BEBEC2'
+        'silver-sand': '#BEBEC2',
+        'accent-theme': '#885FFF',
       }
     },
   },
