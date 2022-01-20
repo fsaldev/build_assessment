@@ -21,7 +21,7 @@ const initialState: IUsersState = {
 
 const reducer = (state = initialState, action: {type: string, payload: any}) => {
   const MasterMap: Record<string, () => IUsersState> = {
-    "USERS/GET_USERS_LIST_REQUEST": (): IUsersState => ({
+    "USERS/PUT_USER_REQUEST": (): IUsersState => ({
       ...state,
       list: {
         ...state.list,
@@ -29,7 +29,7 @@ const reducer = (state = initialState, action: {type: string, payload: any}) => 
         error: null,
       },
     }),
-    "USERS/GET_USERS_LIST_SUCCESS": (): IUsersState => ({
+    "USERS/PUT_USER_SUCCESS": (): IUsersState => ({
       ...state,
       list: {
         ...state.list,
@@ -38,7 +38,7 @@ const reducer = (state = initialState, action: {type: string, payload: any}) => 
         error: null,
       },
     }),
-    "USERS/GET_USERS_LIST_FAILURE": (): IUsersState => ({
+    "USERS/PUT_USER_FAILURE": (): IUsersState => ({
       ...state,
       list: {
         ...state.list,
