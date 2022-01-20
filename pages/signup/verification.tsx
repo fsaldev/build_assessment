@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 import HomeHeaderText from "../../components/headers/HomeHeaderText";
 import ButtonWithIcon from "../../components/buttons/ButtonWithIcon";
 import { useRouter } from "next/router";
@@ -27,7 +27,7 @@ export default function Verifcation() {
     }
   }, [query]);
 
-  const handleOTP = (e: any, name: string) => {
+  const handleOTP = (e: ChangeEvent<HTMLInputElement>, name: string) => {
     const value = e.target.value;
     switch (name) {
       case name:
@@ -78,7 +78,7 @@ export default function Verifcation() {
         <div id="otp" className="flex flex-row justify-center px-2 ">
           {array.map((arr, ind) => (
             <input
-              onChange={(e)=>handleOTP(e, `otp-${ind}`)}
+              onChange={(e) => handleOTP(e, `otp-${ind}`)}
               className="m-2 border focus:border-accent-theme focus:outline-none h-10 w-10 text-center rounded appearance-none"
               type="text"
               id="first"
