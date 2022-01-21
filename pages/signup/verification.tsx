@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useOtp } from "../../hooks/useOtp";
 
 export default function Verifcation() {
-  const { array, label, sublabel, disabled, handleOTP } = useOtp();
+  const { array, label, sublabel, disabled, handleOTP, handleNext } = useOtp();
   return (
     <div className="flex flex-col items-center justify-center">
       <HomeHeaderText Text="Verification" />
@@ -40,7 +40,7 @@ export default function Verifcation() {
           <ButtonWithIcon label="Continue" isDisabled={true} />
         ) : (
           <Link href="/signup/create" passHref>
-            <ButtonWithIcon label="Continue" isDisabled={disabled} />
+            <ButtonWithIcon label="Continue" isDisabled={disabled} onClick={handleNext} />
           </Link>
         )}
       </div>

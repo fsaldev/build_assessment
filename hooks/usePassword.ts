@@ -1,6 +1,9 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { fetchUser_PasswordRequest } from "../store/userPassword/actions";
 
 export const usePassword = () => {
+  const dispatch = useDispatch();
   const [disabled, setDisabled] = React.useState<boolean>(true);
   const [pasCheck, setPasCheck] = React.useState<boolean>(false);
   const [password, setPassword] = React.useState<string>("");
@@ -43,6 +46,10 @@ export const usePassword = () => {
   const handleChange1 = (e: any) => {
     setconfirmPassword(e.target.value);
   };
+  const handleNext = () => {
+    dispatch(fetchUser_PasswordRequest({password}))
+  }
+
   return {
     pasCheck,
     password,
@@ -51,5 +58,6 @@ export const usePassword = () => {
     setDisabled,
     handleChange,
     handleChange1,
+    handleNext,
   };
 };

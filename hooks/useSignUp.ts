@@ -1,6 +1,9 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { fetchUserRequest } from "../store/signup/actions";
 
 export const useSignUp = () => {
+  const dispatch = useDispatch();
   const [email, setEmail] = React.useState<string>("");
   const [phone, setPhone] = React.useState<string>("");
   const [isActiveEmail, setIsActiveEmail] = React.useState<boolean>(true);
@@ -41,6 +44,9 @@ export const useSignUp = () => {
         break;
     }
   };
+  const handleContinue = () => {
+    dispatch(fetchUserRequest({ email, phone }))
+  };
   return {
     email,
     setEmail,
@@ -56,5 +62,6 @@ export const useSignUp = () => {
     setPlaceHolder,
     handleChange,
     handleButtonClick,
+    handleContinue,
   };
 };

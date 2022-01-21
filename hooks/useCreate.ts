@@ -1,6 +1,9 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { fetchUser_CreateRequest } from "../store/createUser/actions";
 
 export const useCreate = () => {
+  const dispatch = useDispatch();
   const [disabled, setDisabled] = React.useState<boolean>(true);
   const [name, setName] = React.useState<string>("");
   const [email, setEmail] = React.useState<string>("");
@@ -20,5 +23,18 @@ export const useCreate = () => {
       setDisabled(true);
     }
   }, [email, name]);
-  return { email, setEmail, name, disabled, setDisabled, handleChange };
+
+  const handleNext = () => {
+    dispatch(fetchUser_CreateRequest({ name, accountID: email }));
+  };
+
+  return {
+    email,
+    setEmail,
+    name,
+    disabled,
+    setDisabled,
+    handleChange,
+    handleNext,
+  };
 };

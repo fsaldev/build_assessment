@@ -1,17 +1,22 @@
 import React, { ChangeEvent, useState } from "react";
+import { useDispatch } from "react-redux";
 import {
+  getFieldValue,
   removeItemFromArray,
   setArrayWithData,
 } from "../components/utils";
 import { useRouter } from "next/router";
+import { fetchVerificationRequest } from "../store/verification/actions";
+
 export const useOtp = () => {
+  const dispatch = useDispatch();
   const [valueOTP, setValueOTP] = useState<string>("");
   const [label, setLabel] = useState<string>("email");
   const [disabled, setDisabled] = useState<boolean>(true);
   const [sublabel, setSubLabel] = useState<string | string[]>(
     "johndoe@gmail.com"
   );
-  const [arr, setArr] = React.useState<any>([]);
+  const [arrOtp, setArrOtp] = React.useState<any>([]);
   const array = [1, 2, 3, 4, 5, 6];
   const router = useRouter();
   const { query } = router;
@@ -35,9 +40,9 @@ export const useOtp = () => {
     switch (name) {
       case name:
         if (value) {
-          setArrayWithData(arr, setArr, name, value);
+          setArrayWithData(arrOtp, setArrOtp, name, value);
         } else if (!value) {
-          removeItemFromArray(arr, setArr, name);
+          removeItemFromArray(arrOtp, setArrOtp, name);
         }
         break;
 
@@ -56,5 +61,13 @@ export const useOtp = () => {
     }
   };
 
-  return { array, label, sublabel, disabled, handleOTP };
+  const handleNext = () => {
+    let otp = "";
+    arrOtp.forEach((ele: any, index: number) => {
+      otp += getFieldValue(arrOtp, `otp-${index}`);
+    });
+    dispatch(fetchVerificationRequest({code: otp}))
+  };
+
+  return { array, label, sublabel, disabled, handleOTP, arrOtp, handleNext };
 };

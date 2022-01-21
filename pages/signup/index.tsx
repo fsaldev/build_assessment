@@ -17,6 +17,7 @@ function SignUp() {
     placeholer,
     handleChange,
     handleButtonClick,
+    handleContinue,
   } = useSignUp();
 
   return (
@@ -51,7 +52,7 @@ function SignUp() {
               href={`/signup/verification?email=${email}&phone=${phone}`}
               passHref
             >
-              <ButtonWithIcon isDisabled={disabled} label="Continue" />
+              <ButtonWithIcon isDisabled={disabled} label="Continue" onClick={handleContinue} />
             </Link>
           )}
         </div>

@@ -13,6 +13,7 @@ export default function CreatePassword() {
     disabled,
     handleChange,
     handleChange1,
+    handleNext,
   } = usePassword();
   return (
     <div className="flex flex-col items-center justify-center">
@@ -52,7 +53,7 @@ export default function CreatePassword() {
           <ButtonWithIcon isDisabled={disabled} label="Continue" />
         ) : (
           <Link href="/signup/phrase" passHref>
-            <ButtonWithIcon isDisabled={disabled} label="Continue" />
+            <ButtonWithIcon isDisabled={disabled} label="Continue" onClick={handleNext} />
           </Link>
         )}
       </div>

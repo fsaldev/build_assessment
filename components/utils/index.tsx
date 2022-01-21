@@ -32,3 +32,12 @@ export const removeItemFromArray = (
     setArray(newArray);
   }
 };
+
+export const getFieldValue = (array: any[], name: string) => {
+  if (array && array.length > 0) {
+    const ind = array.findIndex((obj) => obj[name]);
+    if (ind !== -1) return array[ind][name];
+    else return "";
+  }
+  else return "";
+};

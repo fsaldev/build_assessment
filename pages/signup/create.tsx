@@ -8,8 +8,7 @@ import Divder from "../../components/divider";
 import { useCreate } from "../../hooks/useCreate";
 
 export default function CreateNEAR() {
-  const { email, name, disabled, handleChange } = useCreate();
-
+  const { email, name, disabled, handleChange, handleNext } = useCreate();
   return (
     <div className="flex flex-col items-center justify-center">
       <HomeHeaderText Text="Create NEAR account" />
@@ -35,7 +34,7 @@ export default function CreateNEAR() {
             <VectorIcon />
           </div>
         </div>
-        <div className="mb-1.5 border flex flex-row   h-10 rounded-lg bg-gray-50 appearance-none border-2 border-gray-300 w-full text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-theme">
+        <div className="mb-1.5 border flex flex-row h-10 rounded-lg bg-gray-50 appearance-none border-2 border-gray-300 w-full text-gray-700 leading-tight focus:bg-white focus:border-accent-theme">
           <input
             className="rounded-l-lg bg-gray-50 appearance-none border-0 border-gray-300 w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-theme"
             type="email"
@@ -54,7 +53,7 @@ export default function CreateNEAR() {
           <ButtonWithIcon isDisabled={disabled} label="Continue" />
         ) : (
           <Link href="/signup/secure" passHref>
-            <ButtonWithIcon isDisabled={disabled} label="Continue" />
+            <ButtonWithIcon isDisabled={disabled} label="Continue" onClick={handleNext} />
           </Link>
         )}
       </div>

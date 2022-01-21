@@ -1,4 +1,100 @@
 {
-  "users": [{ "email": "", "phone": "0123123", "id": "12" }],
-  "verify": [{ "code": "123123", "id": "21" }]
+  "signup": [
+    {
+      "email": "fsaldev1",
+      "phone": "0123123",
+      "id": "12"
+    },
+    {
+      "email": "fsaldev1@gmail.com",
+      "phone": "031043247313",
+      "id": "1"
+    },
+    {
+      "id": "5454",
+      "email": "abc@gmail.com"
+    },
+    {
+      "id": "54544545",
+      "email": "abc@gmail.com"
+    },
+    {
+      "email": "fsaldfev1@gmail.com",
+      "phone": "",
+      "id": "7Dh_elv"
+    },
+    {
+      "email": "",
+      "phone": "12345",
+      "id": "8iB8Z96"
+    },
+    {
+      "email": "acasdas",
+      "phone": "",
+      "id": "t9N-98i"
+    },
+    {
+      "email": "acasdas",
+      "phone": "",
+      "id": "2N-BeBn"
+    },
+    {
+      "email": "SDASD",
+      "phone": "",
+      "id": "YZdI29s"
+    },
+    {
+      "email": "abc@gmail.com",
+      "phone": "",
+      "id": "Gi_iOHp"
+    }
+  ],
+  "verify": [
+    {
+      "code": "123123",
+      "id": "21"
+    },
+    {
+      "id": "54544545",
+      "code": "abc@gmail.com"
+    },
+    {
+      "code": "otp",
+      "id": "w6ziDis"
+    },
+    {
+      "code": "otp",
+      "id": "Umk9aVM"
+    },
+    {
+      "code": "123457",
+      "id": "aR8d3Hg"
+    },
+    {
+      "code": "123456",
+      "id": "6O2LLUW"
+    }
+  ],
+  "createUser": [
+    {
+      "name": "",
+      "accountID": "",
+      "id": "1"
+    },
+    {
+      "name": "asdas",
+      "accountID": "asdsa",
+      "id": "QzLsfJD"
+    }
+  ],
+  "userPassword": [
+    {
+      "pasword": "",
+      "id": "1"
+    },
+    {
+      "password": "123",
+      "id": "hUqDbMl"
+    }
+  ]
 }
