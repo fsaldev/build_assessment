@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly with no props 1`] = `
+<withRedux(CreatePassword)>
+  <Provider
+    store={
+      Object {
+        "@@observable": [Function],
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  >
+    <CreatePassword>
+      <div
+        className="flex flex-col items-center justify-center"
+      >
+        <HomeHeaderText
+          Text="Secure your account"
+        >
+          <Header
+            Title={[Function]}
+          >
+            <div
+              className="w-full flex items-center justify-center relative bg-white-smoke py-4"
+            >
+              <title>
+                <span
+                  className="text-black font-medium text-xl"
+                >
+                  Secure your account
+                </span>
+              </title>
+            </div>
+          </Header>
+        </HomeHeaderText>
+        <div
+          className=" px-6 flex flex-row items-center justify-center mt-6"
+        >
+          <p
+            className="text-start text-gray-500"
+          >
+            Keep your apps safe from other with access to your computer.
+          </p>
+        </div>
+        <div
+          className="mt-8 w-full px-6 "
+        >
+          <p
+            className="text-start text-gray-500 "
+          >
+            Password
+          </p>
+          <InputField
+            onChange={[Function]}
+            placeholder="***"
+            type="Password"
+            value=""
+          >
+            <div
+              className="mb-6 rounded-md"
+            >
+              <input
+                className="rounded-lg bg-gray-50 appearance-none border-2 border-gray-300 w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-theme"
+                onChange={[Function]}
+                placeholder="***"
+                type="Password"
+                value=""
+              />
+            </div>
+          </InputField>
+          <p
+            className="text-start text-gray-500 "
+          >
+            Confirm Password
+          </p>
+          <InputField
+            onChange={[Function]}
+            placeholder="***"
+            type="Password"
+            value=""
+          >
+            <div
+              className="mb-6 rounded-md"
+            >
+              <input
+                className="rounded-lg bg-gray-50 appearance-none border-2 border-gray-300 w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-theme"
+                onChange={[Function]}
+                placeholder="***"
+                type="Password"
+                value=""
+              />
+            </div>
+          </InputField>
+        </div>
+        <div
+          className="mt-1 "
+        >
+          <ButtonWithIcon
+            isDisabled={true}
+            label="Continue"
+          >
+            <button
+              className="bg-silver-sand font-bold py-2 px-4 rounded-lg flex items-center"
+              disabled={true}
+            >
+              <span
+                className="mr-3"
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              >
+                Continue
+              </span>
+              <icon-mock />
+            </button>
+          </ButtonWithIcon>
+        </div>
+        <div
+          className="mt-2  "
+        >
+          <p
+            className="text-center  text-[12px]"
+          >
+            claudio@metapool.app
+          </p>
+        </div>
+        <div
+          className="mt-2 px-5 text-[14px]"
+        >
+          <p
+            className="text-center"
+          >
+            By creating a NEAR account, you agree to the NEAR Wallet
+             
+            <Link
+              href="/"
+              passHref={true}
+            >
+              <span
+                href="/"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                style={
+                  Object {
+                    "color": "blue",
+                  }
+                }
+              >
+                Terms of Service
+              </span>
+            </Link>
+             
+            and
+             
+            <Link
+              href="/"
+              passHref={true}
+            >
+              <span
+                href="/"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                style={
+                  Object {
+                    "color": "blue",
+                  }
+                }
+              >
+                Privacy Policy
+              </span>
+            </Link>
+          </p>
+        </div>
+      </div>
+    </CreatePassword>
+  </Provider>
+</withRedux(CreatePassword)>
+`;

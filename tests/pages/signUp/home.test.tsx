@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { shallow, mount } from 'enzyme';
-import Create from '../../../pages/signup/create';
+import Home from '../../../pages/signup/home';
 import wrapper from '../../../store'
 
 it('should render correctly with no props', () => {
-  const CreateWrapper = wrapper.withRedux(Create)
-  const component = mount(<CreateWrapper/>)
+  const HomeWrapper = wrapper.withRedux(Home)
+  const component = mount(<HomeWrapper/>)
   
   
   expect(component).toMatchSnapshot();
