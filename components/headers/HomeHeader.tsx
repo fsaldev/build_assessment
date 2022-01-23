@@ -1,5 +1,6 @@
 import Header from "./Header"
 import HomeIcon from "../../svgs/home.svg"
+import React from "react"
 
 const HomeHeader = () => {
   const title = () => (<>

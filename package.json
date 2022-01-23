@@ -4,7 +4,8 @@
     "dev": "next dev",
     "build": "next build",
     "lint": "next lint",
-    "start": "PORT=3006 next start"
+    "start": "PORT=3006 next start",
+    "test": "jest -c ./config/jest.config.ts"
   },
   "dependencies": {
     "@svgr/webpack": "^6.2.0",
@@ -22,20 +23,28 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
+    "@types/enzyme": "^3.10.11",
+    "@types/jest": "^27.4.0",
     "@types/node": "17.0.4",
     "@types/react": "17.0.38",
     "@types/redux-logger": "^3.0.9",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
     "autoprefixer": "^10.4.0",
     "babel-jest": "^27.4.6",
     "cypress": "^9.3.1",
+    "enzyme": "^3.11.0",
+    "enzyme-to-json": "^3.6.2",
     "eslint": "8.7.0",
     "eslint-config-next": "12.0.8",
-    "jest": "^27.4.7",
+    "jest": "^27.1.3",
     "jest-css-modules": "^2.1.0",
+    "jest-svg-transformer": "^1.0.0",
     "json-server": "^0.17.0",
     "postcss": "^8.4.5",
     "redux-devtools-extension": "^2.13.9",
     "tailwindcss": "^3.0.7",
+    "ts-jest": "^27.1.3",
+    "ts-node": "^10.4.0",
     "typescript": "4.5.4"
   }
 }
