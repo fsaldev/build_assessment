@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly with no props 1`] = `
+<withRedux(CreateNEAR)>
+  <Provider
+    store={
+      Object {
+        "@@observable": [Function],
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  >
+    <CreateNEAR>
+      <div
+        className="flex flex-col items-center justify-center"
+      >
+        <HomeHeaderText
+          Text="HomePage"
+        >
+          <Header
+            Title={[Function]}
+          >
+            <div
+              className="w-full flex items-center justify-center relative bg-white-smoke py-4"
+            >
+              <title>
+                <span
+                  className="text-black font-medium text-xl"
+                >
+                  HomePage
+                </span>
+              </title>
+            </div>
+          </Header>
+        </HomeHeaderText>
+        <div
+          className="mt-2  "
+        >
+          <p
+            className="text-center  text-[18px]"
+          >
+            Welcome Back!
+          </p>
+        </div>
+        <div
+          className=" px-20 flex flex-row items-center justify-center mt-6"
+        >
+          <p
+            className="text-start text-gray-500"
+          >
+            Please enter the password to
+          </p>
+        </div>
+        <div
+          className=" px-20 flex flex-row items-center justify-center "
+        >
+          <p
+            className="text-start text-gray-500"
+          >
+            unlock this wallet
+          </p>
+        </div>
+        <div
+          className="mt-8 w-full px-6 "
+        >
+          <p
+            className="text-start text-gray-500 "
+          >
+            Password
+          </p>
+          <InputField
+            onChange={[Function]}
+            placeholder="***"
+            type="Password"
+            value=""
+          >
+            <div
+              className="mb-6 rounded-md"
+            >
+              <input
+                className="rounded-lg bg-gray-50 appearance-none border-2 border-gray-300 w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-accent-theme"
+                onChange={[Function]}
+                placeholder="***"
+                type="Password"
+                value=""
+              />
+            </div>
+          </InputField>
+        </div>
+        <div
+          className="mt-1 "
+        >
+          <ButtonWithIcon
+            isDisabled={true}
+            label="Unlock"
+          >
+            <button
+              className="bg-silver-sand font-bold py-2 px-4 rounded-lg flex items-center"
+              disabled={true}
+            >
+              <span
+                className="mr-3"
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              >
+                Unlock
+              </span>
+              <icon-mock />
+            </button>
+          </ButtonWithIcon>
+        </div>
+      </div>
+    </CreateNEAR>
+  </Provider>
+</withRedux(CreateNEAR)>
+`;
