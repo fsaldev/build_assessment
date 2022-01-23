@@ -1,0 +1,362 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly with no props 1`] = `
+<withRedux(Phrase)>
+  <Provider
+    store={
+      Object {
+        "@@observable": [Function],
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  >
+    <Phrase>
+      <div
+        className="flex flex-col items-center justify-center"
+      >
+        <HomeHeaderText
+          Text="Secure your account"
+        >
+          <Header
+            Title={[Function]}
+          >
+            <div
+              className="w-full flex items-center justify-center relative bg-white-smoke py-4"
+            >
+              <title>
+                <span
+                  className="text-black font-medium text-xl"
+                >
+                  Secure your account
+                </span>
+              </title>
+            </div>
+          </Header>
+        </HomeHeaderText>
+        <div
+          className=" px-6 flex flex-row items-center justify-center mt-6"
+        >
+          <p
+            className="text-start text-gray-500"
+          >
+            Keep your apps safe from other with access to your computer.
+          </p>
+        </div>
+        <div
+          className="mt-5"
+        >
+          <p
+            className="text-center text-[20px]"
+          >
+            Seed phrase
+          </p>
+        </div>
+        <div
+          className="mt-4    lex flex-row items-center justify-center px-5  "
+        >
+          <div
+            className="border rounded-lg bg-gray-50 flex flex-col items-center justify-center "
+          >
+            <div
+              className=" flex justify-center flex-row  flex-wrap"
+            >
+              <ButtonWithNum
+                description="gather"
+                key="0"
+                number="1"
+              >
+                <div
+                  className=" m-1 mt-2 bg-white border rounded-lg pr-3 p-0.5 flex flex-row items-center justify-center"
+                >
+                  <p
+                    className="text-center text-white bg-gray-500 w-6 rounded-lg"
+                  >
+                    1
+                  </p>
+                  <div
+                    className="pl-2 "
+                  >
+                    gather
+                  </div>
+                </div>
+              </ButtonWithNum>
+              <ButtonWithNum
+                description="engage"
+                key="1"
+                number="2"
+              >
+                <div
+                  className=" m-1 mt-2 bg-white border rounded-lg pr-3 p-0.5 flex flex-row items-center justify-center"
+                >
+                  <p
+                    className="text-center text-white bg-gray-500 w-6 rounded-lg"
+                  >
+                    2
+                  </p>
+                  <div
+                    className="pl-2 "
+                  >
+                    engage
+                  </div>
+                </div>
+              </ButtonWithNum>
+              <ButtonWithNum
+                description="father"
+                key="2"
+                number="3"
+              >
+                <div
+                  className=" m-1 mt-2 bg-white border rounded-lg pr-3 p-0.5 flex flex-row items-center justify-center"
+                >
+                  <p
+                    className="text-center text-white bg-gray-500 w-6 rounded-lg"
+                  >
+                    3
+                  </p>
+                  <div
+                    className="pl-2 "
+                  >
+                    father
+                  </div>
+                </div>
+              </ButtonWithNum>
+              <ButtonWithNum
+                description="plant"
+                key="3"
+                number="4"
+              >
+                <div
+                  className=" m-1 mt-2 bg-white border rounded-lg pr-3 p-0.5 flex flex-row items-center justify-center"
+                >
+                  <p
+                    className="text-center text-white bg-gray-500 w-6 rounded-lg"
+                  >
+                    4
+                  </p>
+                  <div
+                    className="pl-2 "
+                  >
+                    plant
+                  </div>
+                </div>
+              </ButtonWithNum>
+              <ButtonWithNum
+                description="indego"
+                key="4"
+                number="5"
+              >
+                <div
+                  className=" m-1 mt-2 bg-white border rounded-lg pr-3 p-0.5 flex flex-row items-center justify-center"
+                >
+                  <p
+                    className="text-center text-white bg-gray-500 w-6 rounded-lg"
+                  >
+                    5
+                  </p>
+                  <div
+                    className="pl-2 "
+                  >
+                    indego
+                  </div>
+                </div>
+              </ButtonWithNum>
+              <ButtonWithNum
+                description="dental"
+                key="5"
+                number="6"
+              >
+                <div
+                  className=" m-1 mt-2 bg-white border rounded-lg pr-3 p-0.5 flex flex-row items-center justify-center"
+                >
+                  <p
+                    className="text-center text-white bg-gray-500 w-6 rounded-lg"
+                  >
+                    6
+                  </p>
+                  <div
+                    className="pl-2 "
+                  >
+                    dental
+                  </div>
+                </div>
+              </ButtonWithNum>
+              <ButtonWithNum
+                description="sick"
+                key="6"
+                number="7"
+              >
+                <div
+                  className=" m-1 mt-2 bg-white border rounded-lg pr-3 p-0.5 flex flex-row items-center justify-center"
+                >
+                  <p
+                    className="text-center text-white bg-gray-500 w-6 rounded-lg"
+                  >
+                    7
+                  </p>
+                  <div
+                    className="pl-2 "
+                  >
+                    sick
+                  </div>
+                </div>
+              </ButtonWithNum>
+              <ButtonWithNum
+                description="fungus"
+                key="7"
+                number="8"
+              >
+                <div
+                  className=" m-1 mt-2 bg-white border rounded-lg pr-3 p-0.5 flex flex-row items-center justify-center"
+                >
+                  <p
+                    className="text-center text-white bg-gray-500 w-6 rounded-lg"
+                  >
+                    8
+                  </p>
+                  <div
+                    className="pl-2 "
+                  >
+                    fungus
+                  </div>
+                </div>
+              </ButtonWithNum>
+              <ButtonWithNum
+                description="river"
+                key="8"
+                number="9"
+              >
+                <div
+                  className=" m-1 mt-2 bg-white border rounded-lg pr-3 p-0.5 flex flex-row items-center justify-center"
+                >
+                  <p
+                    className="text-center text-white bg-gray-500 w-6 rounded-lg"
+                  >
+                    9
+                  </p>
+                  <div
+                    className="pl-2 "
+                  >
+                    river
+                  </div>
+                </div>
+              </ButtonWithNum>
+              <ButtonWithNum
+                description="morning"
+                key="9"
+                number="10"
+              >
+                <div
+                  className=" m-1 mt-2 bg-white border rounded-lg pr-3 p-0.5 flex flex-row items-center justify-center"
+                >
+                  <p
+                    className="text-center text-white bg-gray-500 w-6 rounded-lg"
+                  >
+                    10
+                  </p>
+                  <div
+                    className="pl-2 "
+                  >
+                    morning
+                  </div>
+                </div>
+              </ButtonWithNum>
+              <ButtonWithNum
+                description="love"
+                key="10"
+                number="11"
+              >
+                <div
+                  className=" m-1 mt-2 bg-white border rounded-lg pr-3 p-0.5 flex flex-row items-center justify-center"
+                >
+                  <p
+                    className="text-center text-white bg-gray-500 w-6 rounded-lg"
+                  >
+                    11
+                  </p>
+                  <div
+                    className="pl-2 "
+                  >
+                    love
+                  </div>
+                </div>
+              </ButtonWithNum>
+              <ButtonWithNum
+                description="cow"
+                key="11"
+                number="12"
+              >
+                <div
+                  className=" m-1 mt-2 bg-white border rounded-lg pr-3 p-0.5 flex flex-row items-center justify-center"
+                >
+                  <p
+                    className="text-center text-white bg-gray-500 w-6 rounded-lg"
+                  >
+                    12
+                  </p>
+                  <div
+                    className="pl-2 "
+                  >
+                    cow
+                  </div>
+                </div>
+              </ButtonWithNum>
+            </div>
+          </div>
+        </div>
+        <div
+          className="mt-5 flex"
+          style={
+            Object {
+              "color": "#885FFF",
+            }
+          }
+        >
+          <icon-mock />
+          <p
+            className="text-center text-[20px] pl-3 "
+          >
+            Copy seed
+          </p>
+        </div>
+        <div
+          className="mt-7 "
+        >
+          <Link
+            href="/signup/home"
+            passHref={true}
+          >
+            <ButtonWithIcon
+              href="/signup/home"
+              isDisabled={false}
+              label="Continue to Login"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              <button
+                className="bg-accent-theme font-bold py-2 px-4 rounded-lg flex items-center"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <span
+                  className="mr-3"
+                  style={
+                    Object {
+                      "color": "white",
+                    }
+                  }
+                >
+                  Continue to Login
+                </span>
+                <icon-mock />
+              </button>
+            </ButtonWithIcon>
+          </Link>
+        </div>
+      </div>
+    </Phrase>
+  </Provider>
+</withRedux(Phrase)>
+`;
